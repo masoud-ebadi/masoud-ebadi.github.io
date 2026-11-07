@@ -855,8 +855,10 @@ a:hover {
 }
 
 .instructor {
-  display: block;
-  max-width: 48rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: start;
   padding: 8px 0;
 }
 
