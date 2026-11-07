@@ -4,6 +4,8 @@ Static HTML / CSS / JS site for **Urban Spatial Analysis & Modeling with ArcGIS 
 
 Live site: https://masoud-ebadi.github.io
 
+**Critical:** Your GitHub username is `masoud-ebadi`. The Pages repo must be named exactly **`masoud-ebadi.github.io`** (with the hyphen). If it is named `masoudebadi.github.io`, rename it in GitHub Settings → General → Repository name.
+
 ## Technical SEO files (already on the site)
 
 | File | Role |
