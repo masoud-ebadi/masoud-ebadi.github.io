@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" fill="none">
+  <rect width="640" height="560" fill="#F7F9FB"/>
+  <path d="M-10 430C80 400 120 470 210 450C310 426 340 360 450 380C540 396 580 450 660 420V560H-10V430Z" fill="#243B53" fill-opacity="0.08"/>
+  <g stroke="#243B53" stroke-opacity="0.28" stroke-width="10">
+    <path d="M0 78H640M0 168H640M0 292H640M0 404H430"/>
+    <path d="M86 0V560M196 0V430M318 0V560M452 0V404M548 80V560"/>
+  </g>
+  <g stroke="#17263C" stroke-opacity="0.55" stroke-width="3">
+    <path d="M86 168H196M196 78H318M318 168H452M452 78H548M86 292H196M318 292H452"/>
+    <path d="M86 78V292M318 78V292M452 168V404"/>
+  </g>
+  <rect x="96" y="88" width="90" height="70" fill="#39A982" fill-opacity="0.18"/>
+  <rect x="206" y="88" width="102" height="70" fill="#39A982" fill-opacity="0.45"/>
+  <rect x="328" y="88" width="114" height="70" fill="#39A982" fill-opacity="0.22"/>
+  <rect x="96" y="178" width="90" height="104" fill="#39A982" fill-opacity="0.62"/>
+  <rect x="206" y="178" width="50" height="48" fill="#39A982" fill-opacity="0.88"/>
+  <rect x="262" y="178" width="46" height="48" fill="#39A982" fill-opacity="0.3"/>
+  <rect x="206" y="232" width="102" height="50" fill="#39A982" fill-opacity="0.5"/>
+  <rect x="328" y="178" width="114" height="104" fill="#39A982" fill-opacity="0.15"/>
+  <rect x="96" y="302" width="90" height="92" fill="#39A982" fill-opacity="0.28"/>
+  <rect x="206" y="302" width="102" height="92" fill="#39A982" fill-opacity="0.72"/>
+  <rect x="328" y="302" width="52" height="92" fill="#39A982" fill-opacity="0.38"/>
+  <rect x="386" y="302" width="56" height="40" fill="#17263C" fill-opacity="0.08"/>
+  <circle cx="231" cy="202" r="5" fill="#17263C"/>
+  <circle cx="360" cy="128" r="5" fill="#17263C"/>
+  <circle cx="140" cy="348" r="5" fill="#17263C"/>
+  <path d="M500 300c18 0 30 14 30 30 0 24-30 52-30 52s-30-28-30-52c0-16 12-30 30-30z" fill="#39A982"/>
+  <circle cx="500" cy="328" r="6" fill="#F7F9FB"/>
+  <g stroke="#17263C" stroke-width="2">
+    <path d="M48 48V28M48 48H68"/>
+    <path d="M48 28l4 6M48 28l-4 6"/>
+  </g>
+  <text x="74" y="34" fill="#17263C" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">N</text>
+  <path d="M48 500H128" stroke="#17263C" stroke-width="3"/>
+  <path d="M48 492V508M88 492V508M128 492V508" stroke="#17263C" stroke-width="2"/>
+  <text x="48" y="528" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="12">schematic scale</text>
+</svg>

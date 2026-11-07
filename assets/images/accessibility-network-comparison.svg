@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#F7F9FB"/>
+  <text x="48" y="40" fill="#17263C" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Straight line</text>
+  <text x="430" y="40" fill="#17263C" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Network path</text>
+  <path d="M400 64V410" stroke="#E5EAF0" stroke-width="8"/>
+  <path d="M36 250C90 230 130 280 190 268C250 256 280 210 360 226" stroke="#243B53" stroke-opacity="0.18" stroke-width="28" stroke-linecap="round"/>
+  <g stroke="#243B53" stroke-opacity="0.35" stroke-width="3">
+    <path d="M40 120H360M40 180H360M40 300H360M40 360H360"/>
+    <path d="M70 90V390M140 90V390M230 90V390M310 90V390"/>
+  </g>
+  <circle cx="92" cy="318" r="8" fill="#17263C"/>
+  <path d="M300 128c10 0 16 8 16 16 0 14-16 28-16 28s-16-14-16-28c0-8 6-16 16-16z" fill="#39A982"/>
+  <circle cx="300" cy="144" r="3.5" fill="#F7F9FB"/>
+  <path d="M100 310L292 150" stroke="#39A982" stroke-width="3" stroke-dasharray="7 6"/>
+  <text x="40" y="420" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">The line crosses the river.</text>
+  <path d="M436 250C490 228 540 286 600 270C660 254 700 214 770 230" stroke="#243B53" stroke-opacity="0.18" stroke-width="28" stroke-linecap="round"/>
+  <g stroke="#243B53" stroke-opacity="0.45" stroke-width="3">
+    <path d="M430 120H760M430 180H760M430 300H760M430 360H760"/>
+    <path d="M470 90V390M540 90V200M540 300V390M630 90V390M710 90V390"/>
+  </g>
+  <path d="M630 180V300" stroke="#39A982" stroke-width="5"/>
+  <circle cx="492" cy="318" r="8" fill="#17263C"/>
+  <path d="M700 128c10 0 16 8 16 16 0 14-16 28-16 28s-16-14-16-28c0-8 6-16 16-16z" fill="#39A982"/>
+  <circle cx="700" cy="144" r="3.5" fill="#F7F9FB"/>
+  <path d="M500 310H622V168H692" stroke="#17263C" stroke-width="3.5" stroke-linejoin="round"/>
+  <text x="430" y="420" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">The walk uses the bridge.</text>
+</svg>

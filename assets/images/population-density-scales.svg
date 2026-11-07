@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#F7F9FB"/>
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#17263C">
+    <text x="48" y="42" font-size="16" font-weight="700">Parcel</text>
+    <text x="292" y="42" font-size="16" font-weight="700">Neighborhood</text>
+    <text x="560" y="42" font-size="16" font-weight="700">District</text>
+  </g>
+  <g stroke="#E5EAF0" stroke-width="8">
+    <path d="M250 20V420M520 20V420"/>
+  </g>
+  <g stroke="#243B53" stroke-width="2">
+    <rect x="36" y="78" width="70" height="58" fill="#39A982" fill-opacity="0.85"/>
+    <rect x="112" y="78" width="70" height="58" fill="#39A982" fill-opacity="0.2"/>
+    <rect x="36" y="142" width="70" height="58" fill="#39A982" fill-opacity="0.35"/>
+    <rect x="112" y="142" width="70" height="58" fill="#39A982" fill-opacity="0.55"/>
+    <rect x="36" y="206" width="70" height="58" fill="#FFFFFF"/>
+    <rect x="112" y="206" width="70" height="58" fill="#39A982" fill-opacity="0.75"/>
+  </g>
+  <g fill="#17263C">
+    <circle cx="58" cy="98" r="3"/><circle cx="74" cy="108" r="3"/><circle cx="66" cy="120" r="3"/>
+    <circle cx="138" cy="104" r="3"/>
+    <circle cx="62" cy="168" r="3"/><circle cx="80" cy="180" r="3"/>
+    <circle cx="146" cy="166" r="3"/><circle cx="160" cy="180" r="3"/><circle cx="150" cy="190" r="3"/>
+    <circle cx="150" cy="230" r="3"/><circle cx="166" cy="246" r="3"/><circle cx="140" cy="248" r="3"/>
+  </g>
+  <text x="36" y="310" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">Small areas. A few lots look very dense.</text>
+  <rect x="286" y="86" width="196" height="196" fill="#39A982" fill-opacity="0.28" stroke="#243B53" stroke-width="2"/>
+  <g fill="#17263C">
+    <circle cx="330" cy="130" r="3.2"/><circle cx="348" cy="142" r="3.2"/><circle cx="338" cy="156" r="3.2"/>
+    <circle cx="410" cy="136" r="3.2"/>
+    <circle cx="334" cy="200" r="3.2"/><circle cx="352" cy="214" r="3.2"/>
+    <circle cx="418" cy="198" r="3.2"/><circle cx="434" cy="214" r="3.2"/><circle cx="422" cy="228" r="3.2"/>
+    <circle cx="420" cy="250" r="3.2"/><circle cx="438" cy="266" r="3.2"/><circle cx="408" cy="268" r="3.2"/>
+  </g>
+  <text x="286" y="330" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">One boundary. Streets and open land</text>
+  <text x="286" y="350" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">enter the denominator.</text>
+  <rect x="548" y="70" width="214" height="250" fill="#39A982" fill-opacity="0.16" stroke="#243B53" stroke-width="2"/>
+  <g fill="#17263C">
+    <circle cx="600" cy="140" r="3.2"/><circle cx="618" cy="152" r="3.2"/><circle cx="608" cy="166" r="3.2"/>
+    <circle cx="680" cy="146" r="3.2"/>
+    <circle cx="604" cy="210" r="3.2"/><circle cx="622" cy="224" r="3.2"/>
+    <circle cx="688" cy="208" r="3.2"/><circle cx="704" cy="224" r="3.2"/><circle cx="692" cy="238" r="3.2"/>
+    <circle cx="690" cy="270" r="3.2"/><circle cx="708" cy="286" r="3.2"/><circle cx="678" cy="288" r="3.2"/>
+  </g>
+  <text x="548" y="360" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">Same residents, larger land base,</text>
+  <text x="548" y="380" fill="#243B53" font-family="Segoe UI, Arial, sans-serif" font-size="14">lower average density.</text>
+</svg>

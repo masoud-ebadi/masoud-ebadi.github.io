@@ -1,0 +1,7 @@
+{% seo %}
+{% if site.google_site_verification != blank %}
+<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">
+{% endif %}
+{% if page.noindex %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
