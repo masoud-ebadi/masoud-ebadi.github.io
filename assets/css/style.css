@@ -876,6 +876,17 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.instructor-photo {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 3px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--bg);
+}
+
 .instructor-name {
   margin-top: -0.2rem;
   color: var(--navy-2);
