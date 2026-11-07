@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Accessibility Analysis Using ArcGIS Pro | Urban GIS Lab</title>
+  <meta name="description" content="Urban accessibility analysis using GIS should follow the street network. Compare straight-line distance with service areas, routing, and location-allocation.">
+  <link rel="canonical" href="https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GIS-Based Urban Accessibility Analysis Using ArcGIS Pro">
+  <meta property="og:description" content="Why straight-line distance fails for urban access, and how network methods measure real reach.">
+  <meta property="og:url" content="https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/">
+  <meta property="og:image" content="https://urbangispro.github.io/assets/images/og-urban-accessibility.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#17263C">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GIS-Based Urban Accessibility Analysis Using ArcGIS Pro",
+    "description": "Urban accessibility analysis using GIS should follow the street network.",
+    "datePublished": "2026-11-07",
+    "author": { "@type": "Person", "name": "Masoud Ebadi" },
+    "publisher": { "@type": "Organization", "name": "Urban GIS Lab" },
+    "mainEntityOfPage": "https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/",
+    "image": "https://urbangispro.github.io/assets/images/og-urban-accessibility.png"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17263C"/><path d="M7 23V11h6v5h6v-5h6v12" fill="none" stroke="#39A982" stroke-width="1.8" stroke-linejoin="round"/><circle cx="16" cy="20.5" r="1.4" fill="#F7F9FB"/></svg>
+        <span class="logo-text">Urban GIS Lab</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-toggle-bar" aria-hidden="true"></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <details class="nav-details">
+          <summary>Tutorials</summary>
+          <div class="nav-sub">
+            <a href="/population-density-analysis-arcgis-pro/">Population Density Analysis</a>
+            <a href="/urban-accessibility-analysis-arcgis-pro/" aria-current="page">Urban Accessibility Analysis</a>
+          </div>
+        </details>
+        <a href="/#about">About</a>
+        <a class="btn btn-primary btn-nav" href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Explore the Course<span class="sr-only"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <article class="post">
+      <header class="post-header">
+        <div class="container post-container">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">Urban Accessibility Analysis</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Tutorial</p>
+          <h1>GIS-Based Urban Accessibility Analysis Using ArcGIS Pro</h1>
+          <p class="byline"><span>Urban GIS Lab</span> <span aria-hidden="true">·</span> <time datetime="2026-11-07">November 7, 2026</time></p>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <div class="container post-container">
+          <p>A service that looks close on a map may be difficult to reach. Rivers, railways, motorways, and missing pedestrian links sit between households and clinics, schools, or stations. Urban accessibility analysis using GIS measures that separation the way people actually move.</p>
+          <p>This article explains the ideas. The applied work is in <a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Urban Spatial Analysis &amp; Modeling with ArcGIS Pro</a>.</p>
+
+          <h2>What Is Urban Accessibility?</h2>
+          <p>Accessibility is how readily people can reach opportunities: hospitals, schools, parks, jobs, or transit. It connects origins, destinations, and the cost of movement between them. A count of facilities in a district is not an accessibility measure.</p>
+
+          <h2>Why Accessibility Matters in Urban Planning</h2>
+          <p>Two neighborhoods can have the same population and very different access. <a href="/population-density-analysis-arcgis-pro/">Population density analysis</a> shows where people are concentrated. Accessibility analysis asks whether they can reach what they need. A short trip on the network is also not proof of service quality.</p>
+
+          <h2>Distance-Based vs Network-Based Accessibility</h2>
+          <p class="formula">Euclidean distance = √[(x₂ − x₁)² + (y₂ − y₁)²]</p>
+          <p>Even a correct straight-line distance ignores the street system. It crosses rivers and closed roads as if they were open ground.</p>
+          <p class="formula">Network distance = the minimum sum of link costs along a connected path</p>
+          <p>Travel time is often the more useful impedance. Connectivity matters as much as length: bridges and overpasses must connect only where a traveler can transfer.</p>
+          <figure>
+            <img src="/assets/images/accessibility-network-comparison.svg" width="800" height="450" alt="Straight line across a river versus a longer street path over a bridge." loading="lazy" decoding="async">
+            <figcaption>Illustration. The straight line crosses the river. The walk uses the bridge.</figcaption>
+          </figure>
+          <p>Housing and a clinic 300 m apart across a river, with the only bridge 1.2 km upstream, can require a walk on the order of 2.4 km. The straight line says “close.” The network says otherwise.</p>
+          <blockquote><p>A short straight-line distance is not evidence that a service is easy to reach.</p></blockquote>
+
+          <h2>GIS Methods for Accessibility Analysis</h2>
+          <h3>Euclidean Distance Analysis</h3>
+          <p>Useful as a screen when no network exists. A poor final description of urban access wherever barriers matter.</p>
+          <h3>Network Analysis</h3>
+          <p>A network dataset stores links with distance or time impedance. The course builds networks from local data and OpenStreetMap. Missing paths and wrong one-way rules pass into the result.</p>
+          <h3>Service Area Analysis</h3>
+          <p>The region reachable from a facility within a cutoff (for example 10 minutes or 800 m). Overlaps show redundancy; gaps show places outside the cutoff. The polygon does not know facility capacity.</p>
+          <h3>Nearest Facility Analysis</h3>
+          <p>Finds the closest destinations along the network, with path and cost. The course includes a police-station case relative to a metro station.</p>
+          <h3>Origin-Destination Matrix</h3>
+          <p>Stores travel cost between many origins and destinations. A simple reading is cumulative access: how many destinations fall within a threshold.</p>
+          <h3>Location-Allocation</h3>
+          <p>Chooses candidate sites to serve demand, often maximizing population coverage within a travel cutoff. The course includes maximum-coverage workflows, including an application in Milan.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Method</th><th scope="col">What it measures</th><th scope="col">What it leaves out</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Euclidean</th><td>Straight-line distance</td><td>Streets and barriers</td></tr>
+                <tr><th scope="row">Service area</th><td>Reach within a cutoff</td><td>Capacity and quality</td></tr>
+                <tr><th scope="row">Nearest facility</th><td>Closest network path</td><td>Whether the facility can accept demand</td></tr>
+                <tr><th scope="row">OD matrix</th><td>Many origin–destination costs</td><td>A map until joined back to areas</td></tr>
+                <tr><th scope="row">Location-allocation</th><td>Best candidate sites for demand</td><td>Constraints not supplied as inputs</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Practical Urban Applications</h2>
+          <ul>
+            <li>Healthcare, schools, emergency services, and public facilities</li>
+            <li>Walking networks for education access</li>
+            <li>Transportation planning with OD costs across zones</li>
+          </ul>
+
+          <h2>How ArcGIS Pro Supports This Work</h2>
+          <p>Raster distance tools screen conditions. Network Analyst handles routing, service areas, nearest facilities, OD matrices, and location-allocation. Check connectivity before trusting the map.</p>
+
+          <h2>Limitations and Data Considerations</h2>
+          <ul>
+            <li>Missing paths change walking access more than driving access.</li>
+            <li>Impedance assumptions (speed, peak hour) are part of the finding.</li>
+            <li>A neighborhood centroid hides people at the edge.</li>
+            <li>A car network does not describe walking or transit.</li>
+          </ul>
+
+          <h2>Conclusion</h2>
+          <p>Urban accessibility follows ways people can travel. Straight-line distance is a screen. Network methods describe reach when the cutoff, mode, and demand unit are stated clearly.</p>
+
+          <div class="callout">
+            <h2>Related course</h2>
+            <p><a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Urban Spatial Analysis &amp; Modeling with ArcGIS Pro</a> covers distance analysis, network construction, routing, service areas, nearest facilities, OD matrices, gravity modeling, and location-allocation. English. ArcGIS Pro required. No programming.</p>
+            <p class="cta-row"><a class="btn btn-primary" href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Learn More: Urban Spatial Analysis with ArcGIS Pro<span class="sr-only"> (opens in a new tab)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Urban GIS Lab</p>
+        <p>Practical GIS for Understanding and Planning Cities.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/#tutorials">Tutorials</a>
+        <a href="/#about">About</a>
+        <a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Udemy Course<span class="sr-only"> (opens in a new tab)</span></a>
+      </nav>
+      <p class="copyright">© 2026 Urban GIS Lab. Masoud Ebadi.</p>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Population Density Analysis in ArcGIS Pro | Urban GIS Lab</title>
+  <meta name="description" content="Population density analysis in ArcGIS Pro divides people by land area. See why scale, data quality, and area measurement change the urban result.">
+  <link rel="canonical" href="https://urbangispro.github.io/population-density-analysis-arcgis-pro/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Population Density Analysis in ArcGIS Pro">
+  <meta property="og:description" content="Why population counts, density values, and density maps answer different urban planning questions.">
+  <meta property="og:url" content="https://urbangispro.github.io/population-density-analysis-arcgis-pro/">
+  <meta property="og:image" content="https://urbangispro.github.io/assets/images/og-population-density.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#17263C">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Population Density Analysis in ArcGIS Pro: Methods and Applications in Urban Planning",
+    "description": "Population density analysis in ArcGIS Pro divides people by land area.",
+    "datePublished": "2026-11-07",
+    "author": { "@type": "Person", "name": "Masoud Ebadi" },
+    "publisher": { "@type": "Organization", "name": "Urban GIS Lab" },
+    "mainEntityOfPage": "https://urbangispro.github.io/population-density-analysis-arcgis-pro/",
+    "image": "https://urbangispro.github.io/assets/images/og-population-density.png"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17263C"/><path d="M7 23V11h6v5h6v-5h6v12" fill="none" stroke="#39A982" stroke-width="1.8" stroke-linejoin="round"/><circle cx="16" cy="20.5" r="1.4" fill="#F7F9FB"/></svg>
+        <span class="logo-text">Urban GIS Lab</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="nav-toggle-bar" aria-hidden="true"></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <details class="nav-details">
+          <summary>Tutorials</summary>
+          <div class="nav-sub">
+            <a href="/population-density-analysis-arcgis-pro/" aria-current="page">Population Density Analysis</a>
+            <a href="/urban-accessibility-analysis-arcgis-pro/">Urban Accessibility Analysis</a>
+          </div>
+        </details>
+        <a href="/#about">About</a>
+        <a class="btn btn-primary btn-nav" href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Explore the Course<span class="sr-only"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <article class="post">
+      <header class="post-header">
+        <div class="container post-container">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li aria-current="page">Population Density Analysis</li>
+            </ol>
+          </nav>
+          <p class="eyebrow">Tutorial</p>
+          <h1>Population Density Analysis in ArcGIS Pro: Methods and Applications in Urban Planning</h1>
+          <p class="byline"><span>Urban GIS Lab</span> <span aria-hidden="true">·</span> <time datetime="2026-11-07">November 7, 2026</time></p>
+        </div>
+      </header>
+
+      <div class="post-content">
+        <div class="container post-container">
+          <p>A district can hold many residents and still be relatively low density if they occupy a wide area. A smaller population on a tight footprint can produce a higher density. Population counts, density values, and density maps answer different questions.</p>
+          <p>This article explains population density analysis in ArcGIS Pro at a conceptual level. It is not a click-by-click workflow. The course <a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Urban Spatial Analysis &amp; Modeling with ArcGIS Pro</a> includes the applied lectures.</p>
+
+          <h2>What Is Population Density Analysis?</h2>
+          <p>A population count answers “how many people?” Population density answers “how many people relative to the land they occupy?”</p>
+          <p class="formula">Population density = Total population / Land area</p>
+          <p>If a district has 48,000 residents on 6 km², density is 8,000 people per km². The same 48,000 residents on 16 km² produce 3,000 people per km². The count is unchanged. The relationship between people and land is not.</p>
+          <ul>
+            <li><strong>Population count</strong> is the number of people in a unit.</li>
+            <li><strong>Population density</strong> is that number divided by an area.</li>
+            <li><strong>Density visualization</strong> is the graphic display of the ratio.</li>
+          </ul>
+          <p>Coloring a map by the count field shows where large populations are. It is not yet a density map.</p>
+
+          <h2>Why Population Density Matters in Urban Planning</h2>
+          <p>School demand, open space, transit load, and emergency planning depend on how people are arranged, not only on a citywide total. Read beside building coverage, floor area, and land use, density helps show whether many residents come from compact buildings, crowded dwellings, or a large area of modest buildings. It does not describe income, age, or housing quality.</p>
+
+          <h2>Understanding Different Spatial Scales</h2>
+          <p>The same residents, grouped into different boundaries, produce different densities. That is the practical meaning of the modifiable areal unit problem.</p>
+          <figure>
+            <img src="/assets/images/population-density-scales.svg" width="800" height="450" alt="The same residents shown at parcel, neighborhood, and district scales." loading="lazy" decoding="async">
+            <figcaption>Schematic only. The people do not change. The area in the denominator does.</figcaption>
+          </figure>
+          <h3>Parcel level</h3>
+          <p>Parcel population is often estimated by apportioning census counts with floor area or dwelling counts. A tower on a small lot can show very high parcel density.</p>
+          <h3>Neighborhood level</h3>
+          <p>Neighborhoods show local contrasts. A boundary that includes a large park looks less dense than the same housing on residential land only.</p>
+          <h3>District level</h3>
+          <p>Districts support citywide comparison. One moderate value can hide both a high-rise cluster and a sparse edge.</p>
+          <p class="formula">Gross density = Population / Total land area</p>
+          <p class="formula">Net residential density = Population / Residential land area</p>
+          <p>Example: 12,000 residents, 150 ha total, 60 ha residential → gross density 80 people/ha, net 200 people/ha. Both are correct. They describe different land bases.</p>
+          <blockquote><p>A precise-looking density value still depends on the zone, the population data, and the way area was measured.</p></blockquote>
+
+          <h2>Population Density Mapping Using GIS</h2>
+          <ol>
+            <li>Define the unit: parcel, neighborhood, district, or a regular grid.</li>
+            <li>Attach a population count.</li>
+            <li>Measure the denominator and record whether it is gross or net.</li>
+            <li>Divide population by area.</li>
+            <li>Symbolize the ratio, not the count.</li>
+          </ol>
+          <p>ArcGIS Pro can calculate geometry and classify results. It does not decide whether the unit is appropriate.</p>
+
+          <h2>Related Spatial Analysis Techniques</h2>
+          <h3>Building Coverage Ratio</h3>
+          <p class="formula">BCR = Building footprint area / Parcel area</p>
+          <p>BCR describes ground coverage, not residents.</p>
+          <h3>Floor Area Ratio</h3>
+          <p class="formula">FAR = Total floor area / Parcel area</p>
+          <p>FAR captures vertical intensity. It is a built-form measure, not a demographic one.</p>
+          <h3>Kernel Density Analysis</h3>
+          <p>Kernel density spreads event values across a raster. A small radius keeps local spikes; a large radius emphasizes a broad trend. The course applies it to population change, traffic accidents, and street density.</p>
+          <h3>2D and 3D Population Density Mapping</h3>
+          <p>Equal-area grids, including hexagons, hold the spatial unit constant. 3D extrusion is a visual encoding, not an extra population count.</p>
+
+          <h2>Practical Applications</h2>
+          <ul>
+            <li><strong>Urban service planning</strong> — density shows concentration; <a href="/urban-accessibility-analysis-arcgis-pro/">accessibility analysis</a> shows reach.</li>
+            <li><strong>Population distribution assessment</strong> — count and density together show concentration vs. spread.</li>
+            <li><strong>Identifying high-density areas</strong> — a place to study, not an automatic problem.</li>
+            <li><strong>Urban growth monitoring</strong> — density can fall while population rises if boundaries expand.</li>
+          </ul>
+
+          <h2>Conclusion</h2>
+          <p>Population density is people divided by land. The result changes with the spatial unit, the data, and the area measurement. BCR, FAR, kernel density, and 2D/3D grids belong beside the ratio, not in its place.</p>
+
+          <div class="callout">
+            <h2>Related course</h2>
+            <p><a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Urban Spatial Analysis &amp; Modeling with ArcGIS Pro</a> covers neighborhood and district density, kernel density of population change, BCR/FAR, and 2D/3D hexagonal density. English. ArcGIS Pro required. No programming.</p>
+            <p class="cta-row"><a class="btn btn-primary" href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Learn More: Urban Spatial Analysis with ArcGIS Pro<span class="sr-only"> (opens in a new tab)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Urban GIS Lab</p>
+        <p>Practical GIS for Understanding and Planning Cities.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/#tutorials">Tutorials</a>
+        <a href="/#about">About</a>
+        <a href="https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7" target="_blank" rel="noopener noreferrer">Udemy Course<span class="sr-only"> (opens in a new tab)</span></a>
+      </nav>
+      <p class="copyright">© 2026 Urban GIS Lab. Masoud Ebadi.</p>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
