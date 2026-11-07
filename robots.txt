@@ -26,6 +26,6 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://urbangispro.github.io/sitemap.xml
+Sitemap: https://masoud-ebadi.github.io/sitemap.xml
 # LLM-oriented site summary
-# https://urbangispro.github.io/llms.txt
+# https://masoud-ebadi.github.io/llms.txt

@@ -4,7 +4,7 @@
 
 ## Site
 
-- Homepage / course landing: https://urbangispro.github.io/
+- Homepage / course landing: https://masoud-ebadi.github.io/
 - Primary language: English
 - Publisher: Urban GIS Lab
 - Instructor: Masoud Ebadi
@@ -34,8 +34,8 @@
 
 ## Free tutorials on this site
 
-- Population density analysis in ArcGIS Pro: https://urbangispro.github.io/population-density-analysis-arcgis-pro/
-- Urban accessibility analysis using GIS / ArcGIS Pro: https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/
+- Population density analysis in ArcGIS Pro: https://masoud-ebadi.github.io/population-density-analysis-arcgis-pro/
+- Urban accessibility analysis using GIS / ArcGIS Pro: https://masoud-ebadi.github.io/urban-accessibility-analysis-arcgis-pro/
 
 ## Instructor profiles
 

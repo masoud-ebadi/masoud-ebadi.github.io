@@ -2,7 +2,7 @@
 
 Static HTML / CSS / JS site for **Urban Spatial Analysis & Modeling with ArcGIS Pro**.
 
-Live site: https://urbangispro.github.io
+Live site: https://masoud-ebadi.github.io
 
 ## Technical SEO files (already on the site)
 
@@ -22,7 +22,7 @@ Live site: https://urbangispro.github.io
 
 ## Deploy
 
-Push to `main` on `urbangispro/urbangispro.github.io`.  
+Push to `main` on `urbangispro/masoud-ebadi.github.io`.  
 Pages source: Deploy from a branch → `main` / root.  
 `.nojekyll` keeps GitHub Pages from running Jekyll.
 
@@ -33,16 +33,16 @@ Pages source: Deploy from a branch → `main` / root.
 ### 1. Google Search Console
 
 1. Open https://search.google.com/search-console
-2. Add property: **URL prefix** → `https://urbangispro.github.io`
+2. Add property: **URL prefix** → `https://masoud-ebadi.github.io`
 3. Verify with **HTML tag** (copy the token only)
 4. Paste the token into each page `<head>` as:
    `<meta name="google-site-verification" content="YOUR_TOKEN">`
    Or ask the assistant to add it after you paste the token here.
-5. Submit sitemap: `https://urbangispro.github.io/sitemap.xml`
+5. Submit sitemap: `https://masoud-ebadi.github.io/sitemap.xml`
 6. Use **URL Inspection** on:
-   - `https://urbangispro.github.io/`
-   - `https://urbangispro.github.io/population-density-analysis-arcgis-pro/`
-   - `https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/`
+   - `https://masoud-ebadi.github.io/`
+   - `https://masoud-ebadi.github.io/population-density-analysis-arcgis-pro/`
+   - `https://masoud-ebadi.github.io/urban-accessibility-analysis-arcgis-pro/`
 7. Request indexing for each.
 
 ### 2. Bing Webmaster Tools (recommended)
