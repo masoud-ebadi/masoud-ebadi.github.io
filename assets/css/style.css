@@ -666,12 +666,50 @@ a:hover {
 }
 
 .hero-grid {
-  display: block;
-  max-width: 44rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-copy {
+  text-align: left;
 }
 
 .hero-copy .lede {
   max-width: 38rem;
+}
+
+.hero-media {
+  margin: 0;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #0f1720;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-frame-pending {
+  display: grid;
+  place-items: center;
+  color: #d5deea;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
 }
 
 .hero-figure {
@@ -1213,6 +1251,10 @@ a:hover {
   .split,
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    text-align: left;
   }
 }
 
