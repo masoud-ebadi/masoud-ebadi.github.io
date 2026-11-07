@@ -197,11 +197,152 @@ a:hover {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 1.5rem;
+  align-items: center;
 }
 
 .text-link {
   font-weight: 700;
   color: var(--navy);
+}
+
+.udemy-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.udemy-mark img,
+.udemy-logo {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.udemy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 1rem;
+  padding: 8px 12px 8px 8px;
+  border-radius: 999px;
+  background: #f3e8ff;
+  border: 1px solid #e2c8ff;
+  color: #5624d0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.udemy-pill:hover {
+  color: #4015a8;
+  background: #ebe0ff;
+}
+
+.udemy-pill img {
+  height: 26px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.btn-udemy {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #a435f0;
+  color: #fff;
+  border-color: #a435f0;
+}
+
+.btn-udemy:hover {
+  background: #8710d8;
+  color: #fff;
+  border-color: #8710d8;
+}
+
+.btn-udemy img {
+  height: 22px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.udemy-bar {
+  background: #1c1d1f;
+  color: #fff;
+  padding: 14px 0;
+}
+
+.udemy-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.udemy-bar p {
+  margin: 0;
+  color: #d1d2e0;
+  font-size: 0.98rem;
+}
+
+.udemy-bar strong {
+  color: #fff;
+}
+
+.udemy-bar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.udemy-bar-brand img {
+  height: 28px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.udemy-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  vertical-align: middle;
+}
+
+.udemy-inline img {
+  height: 22px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.course-link-box {
+  margin: 1.4em 0;
+  padding: 18px 18px 16px;
+  border: 1px solid #e2c8ff;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #faf5ff 0%, #fff 100%);
+}
+
+.course-link-box p {
+  margin: 0 0 0.85rem;
+  color: var(--navy-2);
+}
+
+.footer-udemy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-udemy img {
+  height: 22px;
+  width: auto;
+  border-radius: 4px;
 }
 
 .site-header {
