@@ -666,10 +666,8 @@ a:hover {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-  gap: 48px;
-  align-items: center;
+  display: block;
+  max-width: 44rem;
 }
 
 .hero-copy .lede {
