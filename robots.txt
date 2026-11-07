@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
 
+# Common AI / search crawlers (explicit allow)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://urbangispro.github.io/sitemap.xml
+# LLM-oriented site summary
+# https://urbangispro.github.io/llms.txt

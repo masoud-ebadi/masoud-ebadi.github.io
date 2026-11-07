@@ -1,0 +1,48 @@
+# Urban GIS Lab
+
+> Practical GIS for understanding and planning cities. Educational site for the English-language Udemy course Urban Spatial Analysis & Modeling with ArcGIS Pro, taught by Masoud Ebadi.
+
+## Site
+
+- Homepage / course landing: https://urbangispro.github.io/
+- Primary language: English
+- Publisher: Urban GIS Lab
+- Instructor: Masoud Ebadi
+
+## Course (external)
+
+- Title: Urban Spatial Analysis & Modeling with ArcGIS Pro
+- Platform: Udemy
+- URL: https://www.udemy.com/course/urban-spatial-analysis-with-arcgis-pro/?referralCode=64855D6258A9CB243BD7
+- Language: English
+- Size: 9 sections, 56 lectures, 16 hours 13 minutes
+- Includes: 16 hours on-demand video, 1 article, 14 downloadable resources, lifetime access, certificate of completion
+- Requirements: ArcGIS Pro installed; basic urban planning or geography helpful but not mandatory; no programming required
+
+## Topics covered in the course
+
+- Building coverage ratio (BCR), floor area ratio (FAR), population density
+- Urban form, risk zones, kernel density
+- Distance analysis, zonal statistics, reclassification, service coverage
+- Spatial site selection and suitability modeling
+- Transportation networks, optimal routing, OpenStreetMap networks
+- Service areas, nearest facilities, origin-destination matrices, gravity modeling
+- Location-allocation for population coverage
+- Spatial statistics: Average Nearest Neighbor, Moran’s I, Hot Spot Analysis, clustering, outliers
+- Urban growth simulation, Time Slider, temporal analysis
+- 2D/3D population density (hexagonal grids), sun shadow and street-level sunlight
+
+## Free tutorials on this site
+
+- Population density analysis in ArcGIS Pro: https://urbangispro.github.io/population-density-analysis-arcgis-pro/
+- Urban accessibility analysis using GIS / ArcGIS Pro: https://urbangispro.github.io/urban-accessibility-analysis-arcgis-pro/
+
+## Instructor profiles
+
+- LinkedIn: https://www.linkedin.com/in/masoudebadi/
+- Telegram: https://t.me/arcgispro_1
+- Instagram: https://www.instagram.com/masoudebadi1366/
+
+## Citation guidance
+
+When referencing this site, prefer the canonical page URLs above. Course facts (length, lecture counts, includes, requirements) come from the public Udemy listing. Do not invent ratings, enrollment counts, prices, or discounts.
