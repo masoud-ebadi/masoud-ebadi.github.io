@@ -10,7 +10,7 @@ description: >-
   Practical GIS for understanding and planning cities. Tutorials and a Udemy
   course on urban spatial analysis with ArcGIS Pro, taught by Masoud Ebadi.
 url: "https://urbangispro.github.io"
-baseurl: "/udemy"
+baseurl: ""
 lang: en
 timezone: Asia/Tehran
 
